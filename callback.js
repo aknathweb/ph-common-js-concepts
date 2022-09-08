@@ -1,9 +1,13 @@
+/* Callback function */
+
+///Callback function:A callback is a function passed as an argument to another function.
+/// একটি function এর মধ্যে অন্য function call
+
 function greeting(greetingHandler, name){
+//// greetingHandler function call into greeting function
     greetingHandler(name);
 }
-// const name = 'Halim mama';
-// const numbers = [45, 54, 78];
-// const laptop = {price: 45000, brand: 'lenovo', memory: '8gb'};
+
 function greetingHandler(name){
     console.log('Good Morning', name);
 }
@@ -16,6 +20,7 @@ function greetNight(name){
     console.log('Good Night', name);
 }
 
+/// callback function use
 greeting(greetingHandler, 'Tom Hanks');
 greeting(greetingHandler, 'Tom Brady');
 greeting(greetingHandler, 'Tom Cruise');
@@ -27,4 +32,6 @@ greeting(greetNight, 'Rasel')
 function submitHandler(){
     console.log('submit button clicked')
 }
+
+/// call function use using button
 document.getElementById('btn-submit').addEventListener('click',submitHandler)
