@@ -1,5 +1,6 @@
-// primitive types are pass by value
+/* primitive and non-primitive after value change by function */
 
+/// primitive types are pass by value
 let num1 = 5;
 let num2 = 7;
 
@@ -10,9 +11,11 @@ function multiply(a, b){
 }
 console.log(num1);
 multiply(num1, num2);
+/// primitive value change under function
+/// not effected
 console.log(num1);
 
-// object and array are pass by reference
+///Non-primitive: object and array are pass by reference
 let student1 = {name: 'Jalil', partner: 'borsha'};
 let student2 = {name: 'raj', partner: 'anika'};
 
@@ -23,4 +26,6 @@ function makeMovie(couple1, couple2){
 
 console.log(student1, student2);
 makeMovie(student1, student2);
+/// Non-primitive value change under function
+/// effected due to pass reference
 console.log(student1, student2);
